@@ -1,0 +1,22 @@
+BLANK_SYMBOL = b
+INITIAL_STATE = q0
+TERMINAL_STATES = {qf}
+
+q0:1 -> q0:1, R
+q0:b -> q1:b, L
+q1:1 -> q1:1, L
+q1:b -> q2:b, R
+q2:1 -> q2:1, R
+q2:b -> q3:b, L
+q3:1 -> q3:1, L
+q3:b -> q4:b, R
+q4:1 -> q4:1, R
+q4:b -> q5:b, L
+q5:1 -> q5:1, L
+q5:b -> q6:b, R
+q6:1 -> q6:1, R
+q6:b -> q7:b, L
+q7:1 -> q7:1, L
+q7:b -> q8:b, R
+q8:1 -> q8:1, R
+q8:b -> qf:b, N
