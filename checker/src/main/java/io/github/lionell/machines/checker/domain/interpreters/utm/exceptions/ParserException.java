@@ -12,6 +12,6 @@ public class ParserException extends RuntimeException {
 
     @Override
     public String getMessage() {
-        return "[Parser]" + super.getMessage();
+        return "[Parser] " + super.getMessage();
     }
 }

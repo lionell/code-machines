@@ -25,7 +25,7 @@ import java.util.stream.Collectors;
  * @author Ruslan Sakevych
  */
 public class UTM implements StringMachine {
-    private static final int THRESHOLD = 10000;
+    private static final int THRESHOLD = 50000;
     private final char blankSymbol;
     private final String initialState;
     private final Set<String> terminalStates;

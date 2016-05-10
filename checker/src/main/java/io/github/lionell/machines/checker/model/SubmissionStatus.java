@@ -5,6 +5,7 @@ package io.github.lionell.machines.checker.model;
  *
  * @author Ruslan Sakevych
  */
+
 public enum SubmissionStatus {
     WAITING,
     CHECKING,

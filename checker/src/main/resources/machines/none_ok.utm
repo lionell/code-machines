@@ -13,10 +13,4 @@ q3:b -> q4:b, R
 q4:1 -> q4:1, R
 q4:b -> q5:b, L
 q5:1 -> q5:1, L
-q5:b -> q6:b, R
-q6:1 -> q6:1, R
-q6:b -> q7:b, L
-q7:1 -> q7:1, L
-q7:b -> q8:b, R
-q8:1 -> q8:1, R
-q8:b -> qf:b, N
+q5:b -> qf:b, N

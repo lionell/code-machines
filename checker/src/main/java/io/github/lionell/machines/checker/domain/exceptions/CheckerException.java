@@ -12,6 +12,6 @@ public class CheckerException extends RuntimeException {
 
     @Override
     public String getMessage() {
-        return "[StringMachineChecker]" + super.getMessage();
+        return "[StringMachineChecker] " + super.getMessage();
     }
 }

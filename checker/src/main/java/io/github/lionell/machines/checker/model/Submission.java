@@ -27,7 +27,7 @@ public class Submission {
     private String solution;
 
     @NotNull
-    private String problem;
+    private long problem;
 
     @NotNull
     @Enumerated(EnumType.STRING)
@@ -36,7 +36,7 @@ public class Submission {
     public Submission() {
     }
 
-    public Submission(String solution, String problem, SubmissionStatus status) {
+    public Submission(String solution, long problem, SubmissionStatus status) {
         this.solution = solution;
         this.problem = problem;
         this.status = status;
@@ -58,11 +58,11 @@ public class Submission {
         this.solution = solution;
     }
 
-    public String getProblem() {
+    public long getProblem() {
         return problem;
     }
 
-    public void setProblem(String problem) {
+    public void setProblem(long problem) {
         this.problem = problem;
     }
 

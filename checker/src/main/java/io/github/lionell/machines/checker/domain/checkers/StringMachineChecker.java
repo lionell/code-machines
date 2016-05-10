@@ -34,11 +34,13 @@ public class StringMachineChecker {
 
     public void loadTest(String path) {
         List<String> lines;
+
         try {
             lines = Files.readAllLines(Paths.get(path));
         } catch (IOException e) {
             throw new CheckerException("Can't load file with tests!");
         }
+
         lines
                 .stream()
                 .map(TEST_REGEX::matcher)
@@ -78,6 +80,7 @@ public class StringMachineChecker {
         } catch (InterruptedException e) {
             throw new CheckerException("Time limit exceeded while checking!");
         }
+
         List<String> outputs = new ArrayList<>();
         for (Future<String> f : futures) {
             try {
@@ -86,6 +89,7 @@ public class StringMachineChecker {
                 throw new CheckerException("Time limit exceeded while checking!");
             }
         }
+
         checkTests(outputs);
     }
 
@@ -112,6 +116,7 @@ public class StringMachineChecker {
                     ? Verdict.OK
                     : Verdict.WRONG_ANSWER;
         };
+
         verdicts = IntStream
                 .range(0, tests.size())
                 .mapToObj(getVerdict)
@@ -120,6 +125,16 @@ public class StringMachineChecker {
 
     public List<Verdict> getVerdicts() {
         return verdicts;
+    }
+
+    public Verdict getVerdict() {
+        for (Verdict v : getVerdicts()) {
+            if (v != Verdict.OK) {
+                return v;
+            }
+        }
+
+        return Verdict.OK;
     }
 
     private static class Test {

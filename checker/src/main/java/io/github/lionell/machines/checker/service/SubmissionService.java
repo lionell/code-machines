@@ -15,4 +15,6 @@ public interface SubmissionService {
     Submission get(long id);
 
     Submission create(Submission submission);
+
+    Submission update(Submission submission);
 }

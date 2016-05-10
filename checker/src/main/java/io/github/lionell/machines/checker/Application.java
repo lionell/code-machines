@@ -1,9 +1,7 @@
 package io.github.lionell.machines.checker;
 
-import io.github.lionell.machines.checker.domain.TaskHandler;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.ImportResource;
 
 /**
@@ -17,9 +15,6 @@ import org.springframework.context.annotation.ImportResource;
 public class Application {
 
     public static void main(String[] args) {
-        ApplicationContext ctx = SpringApplication.run(Application.class, args);
-
-        TaskHandler handler = (TaskHandler) ctx.getBean("handler");
-        handler.run();
+        SpringApplication.run(Application.class, args);
     }
 }
