@@ -1,0 +1,3 @@
+BLANK_SYMBOL = b
+
+1 -> 9

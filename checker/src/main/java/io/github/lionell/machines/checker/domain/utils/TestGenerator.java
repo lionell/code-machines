@@ -25,7 +25,7 @@ public class TestGenerator {
         return repeat('1', a) + "->" + repeat('9', a);
     };
 
-    public static void main(String[] args) {
+    public static void gmain(String[] args) {
         long start = System.currentTimeMillis();
         TestGenerator.genTests(ONE_TO_NINE_GENERATOR, "res/tests/one_to_nine_" + TESTS_COUNT + "x" + UPPER_BOUND + ".txt");
         long finish = System.currentTimeMillis();

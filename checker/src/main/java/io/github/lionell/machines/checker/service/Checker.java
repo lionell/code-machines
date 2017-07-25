@@ -8,6 +8,7 @@ import io.github.lionell.machines.checker.model.Problem;
 import io.github.lionell.machines.checker.model.Submission;
 import io.github.lionell.machines.checker.model.SubmissionStatus;
 
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -65,7 +66,7 @@ public class Checker implements Runnable {
         checker.runTests(machine);
 
         try {
-            Thread.sleep(5000);
+            Thread.sleep(10000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
